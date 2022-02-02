@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            .js{
+                font-weight: bold;
+                color: red;
+            }
+            #first{
+                color: rgb(51, 128, 0);
+            }
+            span{
+                color:  blue;
+            }
+        </style>
+        <script>
+            function nightDayHandler(self){
+                var target = document.querySelector('body')
+                if (self.value === 'night'){
+                    target.style.backgroundColor='black';
+                    target.style.color='white';
+                    self.value = 'day';
+
+                    var list = document.querySelectorAll('a');
+                    var i = 0;
+                    while (i < list.length ) {
+                        list[i].style.color = 'powderblue'
+                        i += 1;
+                    }
+                }    
+                else{ 
+                    target.style.backgroundColor='white';
+                    target.style.color='black';
+                    self.value = 'night';
+                    var list = document.querySelectorAll('a');
+                    var i = 0;
+                    while (i < list.length ) {
+                        list[i].style.color = 'blue'
+                        i += 1;
+                    }
+                }
+            }
+        </script>
+        <title>ex2</title>
+    </head>
+    <body>
+        <!-- <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor='black';
+        document.querySelector('body').style.color='white';
+        ">
+        <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor='white';
+        document.querySelector('body').style.color='black'
+        "> -->
+        <input id ="night_day" type="button" value="night" onclick="
+            nightDayHandler(this);
+        ">
+
+        <input type="text" onkeydown="alert('key down!')">
+        <h1 style="color: powderblue; background-color: purple;">sdfasdfasdfasdfasdf</h1>
+
+        <p>sdfasd<span id ="first" class="js">fasdegqwgq</span>rhqerfgsljvadskfjhsdoufihdfsf <span class="js"></span>이히히히ㅣㅎㅁㄴㅇsdfasdafbasfbfadsfas
+            sdfasdfasdf
+            asdg <span class="js">이히히히</span>ㅣdhwethwtrhw<span>rthbvb sfgns</span>
+            dfgasd <span class="js">이히히히</span>ㅣgas으으아<a href="https://www.w3.org/TR/2011/WD-html5-20110405/text-level-semantics.html#the-a-element" target="_blank" title="html5 specification">아아아으아으</a>dgafgd <span class="js">이히히히</span>ㅣfb,uki,yukluikt
+            ㄹ
+            으으아<a href="https://www.w3.org/TR/2011/WD-html5-20110405/text-level-semantics.html#the-a-element" target="_blank" title="html5 specification">아아아으아으</a>ㅁㄴㅇㄹㅁ <span class="js">이히히히</span>ㅣㄴㅇㄹ ㅓ 으으아<a href="https://www.w3.org/TR/2011/WD-html5-20110405/text-level-semantics.html#the-a-element" target="_blank" title="html5 specification">아아아으아으</a>    </p>
+
+
+    </body>
+
+
+</html>
